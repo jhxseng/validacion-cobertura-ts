@@ -1,11 +1,7 @@
-import LocationStep from './pages/Coverage/LocationStep'
+import CoverageForm from './pages/Coverage/CoverageForm'
 
 function App() {
-  return (
-    <main>
-      <LocationStep />
-    </main>
-  )
+  return <CoverageForm />
 }
 
 export default App
