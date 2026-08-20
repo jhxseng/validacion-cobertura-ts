@@ -41,20 +41,21 @@ function LocationStep({ onConfirm }: LocationStepProps) {
   }
 
   return (
-    <section>
-      <h2>¿Dónde deseas instalar tu servicio?</h2>
+    <section className="coverage-step">
 
-      <p>
+      <h2 className="coverage-title">
+        ¿Dónde deseas instalar tu servicio?
+      </h2>
+
+      <p className="coverage-description">
         Selecciona tu ubicación en el mapa o busca tu dirección.
       </p>
 
-      <Input
-        placeholder="Ingresa tu dirección"
-      //value={location.address}
-      //onChange={setAddress}
-
-      >
-      </Input>
+      <div className="form-field">
+        <Input
+          placeholder="Ingresa tu dirección"
+        />
+      </div>
 
       <Map
         onLocationChange={(lat, lng) => {
@@ -69,9 +70,11 @@ function LocationStep({ onConfirm }: LocationStepProps) {
         }}
       />
 
-      <Button onClick={handleConfirmAddress}>
-        Confirmar dirección
-      </Button>
+      <div className="form-field">
+        <Button onClick={handleConfirmAddress}>
+          Confirmar dirección
+        </Button>
+      </div>
 
     </section>
   )

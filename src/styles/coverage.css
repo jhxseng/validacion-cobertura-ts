@@ -1,0 +1,353 @@
+/* =========================
+   COLORES WIN
+   ========================= */
+
+:root {
+  --win-orange: #ff5f0a;
+  --win-orange-dark: #e94f00;
+  --win-orange-light: #fff3ec;
+
+  --text-primary: #222222;
+  --text-secondary: #666666;
+
+  --background: #f7f7f7;
+  --white: #ffffff;
+
+  --error: #d93025;
+  --success: #188038;
+}
+
+
+/* =========================
+   CONTENEDOR GENERAL
+   ========================= */
+
+.coverage-page {
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: 24px 16px;
+}
+
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+.coverage-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   INDICADOR DE PASOS
+   ========================= */
+
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+}
+
+.step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  background-color: #e5e5e5;
+  color: #666666;
+}
+
+.step.active .step-circle {
+  background-color: var(--win-orange);
+  color: var(--white);
+}
+
+.step-label {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.step.active .step-label {
+  color: var(--win-orange);
+}
+
+.step-line {
+  width: 50px;
+  height: 2px;
+  background-color: #e5e5e5;
+  margin: 0 12px;
+}
+
+
+/* =========================
+   TÍTULOS
+   ========================= */
+
+.coverage-title {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.coverage-description {
+  margin: 0 0 24px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   CAMPOS
+   ========================= */
+
+.form-field {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   INPUTS Y SELECTS
+   ========================= */
+
+.form-input,
+.form-select {
+  width: 100%;
+  box-sizing: border-box;
+
+  height: 48px;
+  padding: 0 14px;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+
+  background-color: var(--white);
+  color: var(--text-primary);
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: #999999;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--win-orange);
+  box-shadow: 0 0 0 3px rgba(255, 95, 10, 0.12);
+}
+
+
+/* =========================
+   BOTÓN
+   ========================= */
+
+.form-button {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: var(--win-orange);
+  color: var(--white);
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.form-button:hover {
+  background-color: var(--win-orange-dark);
+}
+
+.form-button:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   ERRORES
+   ========================= */
+
+.form-error {
+  margin: 6px 0 0;
+
+  color: var(--error);
+  font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (min-width: 768px) {
+  .coverage-page {
+    padding: 40px 20px;
+  }
+
+  .coverage-container {
+    padding: 32px;
+  }
+
+  .coverage-title {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   RESUMEN DE UBICACIÓN
+   ========================= */
+
+.location-summary {
+  margin-bottom: 24px;
+  padding: 16px;
+
+  background-color: var(--win-orange-light);
+
+  border: 1px solid rgba(255, 95, 10, 0.15);
+  border-radius: 10px;
+}
+
+.location-summary p {
+  margin: 5px 0;
+
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.location-summary-title {
+  margin-bottom: 10px !important;
+
+  color: var(--text-primary) !important;
+  font-size: 14px !important;
+  font-weight: 700;
+}
+
+.location-summary strong {
+  color: var(--text-primary);
+}
+
+
+/* =========================
+   CAMPOS
+   ========================= */
+
+.form-field {
+  margin-bottom: 18px;
+}
+
+.required {
+  color: var(--win-orange);
+}
+
+
+/* =========================
+   CHECKBOX
+   ========================= */
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: 4px 0 14px;
+}
+
+.checkbox-field input {
+  width: 17px;
+  height: 17px;
+
+  margin: 0;
+
+  accent-color: var(--win-orange);
+
+  cursor: pointer;
+}
+
+.checkbox-field label {
+  color: var(--text-primary);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   CAMPOS DESHABILITADOS
+   ========================= */
+
+.form-input:disabled {
+  background-color: #f1f1f1;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   FILA DE CAMPOS
+   ========================= */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+
+/* =========================
+   UBIGEO
+   ========================= */
+
+.ubigeo {
+  margin: -8px 0 18px;
+
+  color: var(--text-secondary);
+  font-size: 12px;
+}

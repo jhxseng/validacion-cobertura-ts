@@ -12,7 +12,10 @@ function Button({
   type = 'button',
 }: ButtonProps) {
   return (
-    <button type={type} onClick={onClick}>
+    <button 
+      className="form-button"
+      type={type} 
+      onClick={onClick}>
       {children}
     </button>
   )

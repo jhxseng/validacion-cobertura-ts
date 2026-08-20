@@ -11,6 +11,7 @@ function Input({
 }: InputProps) {
   return (
     <input
+      className="form-input"
       type="text"
       placeholder={placeholder}
       value={value}
