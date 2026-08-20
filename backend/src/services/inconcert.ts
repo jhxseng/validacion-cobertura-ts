@@ -89,8 +89,6 @@ export async function addAddressToBatch(
   token: string,
   batchId: string,
   telefono: string,
-  direccion: string,
-  referencia: string,
   data: Record<string, unknown>
 ): Promise<unknown> {
   const apiUrl = process.env.INCONCERT_API_URL
@@ -111,7 +109,6 @@ export async function addAddressToBatch(
         account_Name: 'WHATSAPP_test_instalacioneswin',
         batchId,
         address: telefono,
-        parameters: [direccion, referencia],
         data,
       }),
     }

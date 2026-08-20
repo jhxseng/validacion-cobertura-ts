@@ -7,6 +7,7 @@ import '../../styles/coverage.css'
 import { sendCoverageData } from '../../services/whatsapp/whatsapp'
 
 
+
 function CoverageForm() {
     const [step, setStep] = useState(1)
     const [location, setLocation] = useState<LocationData | null>(null)
