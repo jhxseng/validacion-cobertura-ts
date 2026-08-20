@@ -3,8 +3,10 @@ import type { CoverageFormData } from '../../types/coverage'
 export async function sendCoverageData(
   formData: CoverageFormData
 ): Promise<void> {
+  const apiUrl = import.meta.env.VITE_API_URL
+  
   const response = await fetch(
-    'http://localhost:3000/api/whatsapp/coverage',
+    `${apiUrl}/api/whatsapp/coverage`,
     {
       method: 'POST',
       headers: {
