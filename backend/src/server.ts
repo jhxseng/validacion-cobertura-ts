@@ -19,6 +19,27 @@ app.get('/api/health', (_req, res) => {
 
 app.use('/api/whatsapp', whatsappRouter)
 
+app.get('/api/test-inconcert', async (_req, res) => {
+  try {
+    const response = await fetch(
+      'https://win2.i6.inconcert.cloud/inconcert/api'
+    )
+
+    const text = await response.text()
+
+    res.json({
+      ok: true,
+      status: response.status,
+      response: text,
+    })
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      error: String(error),
+    })
+  }
+})
+
 const PORT = Number(process.env.PORT) || 3000
 
 app.listen(PORT, '0.0.0.0', () => {
