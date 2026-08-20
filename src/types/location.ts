@@ -5,5 +5,6 @@ export interface LocationData {
   department: string
   province: string
   district: string
+  streetName: string
 }
 

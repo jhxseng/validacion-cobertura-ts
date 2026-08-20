@@ -39,6 +39,7 @@ function DetailsStep({ location, onSubmit }: DetailsStepProps) {
         addressNumber: '',
     })
 
+    
     useEffect(() => {
         getUbigeos()
             .then((data) => {
@@ -108,6 +109,10 @@ function DetailsStep({ location, onSubmit }: DetailsStepProps) {
         setUbigeo(districtData?.ubigeo ?? '')
 
     }, [ubigeos, department, province, district])
+
+    useEffect(() => {
+        setStreetName(location.streetName ?? '')
+    }, [location.streetName])
 
 
     const departments = ubigeos ? Object.keys(ubigeos) : []
@@ -487,6 +492,7 @@ function DetailsStep({ location, onSubmit }: DetailsStepProps) {
                     type="text"
                     id="streetName"
                     value={streetName}
+                    
                     onChange={(event) => {
                         setStreetName(event.target.value)
 
